@@ -141,11 +141,6 @@ def validate_url(ctx, name, base_url):
 
 
 def validate_drone_api(ctx, name, value):
-    value = value.strip()
-    regex = re.compile(r"^[a-zA-Z0-9]{30,50}\.[a-zA-Z0-9]{30,50}\.[a-zA-Z0-9]{30,50}$")
-    if regex.match(value) is None:
-        raise click.BadParameter(f"drone token is not valid `{value}`")
-
     return value
 
 
